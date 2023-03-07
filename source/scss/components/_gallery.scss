@@ -18,6 +18,11 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       grid-gap: 10px;
     }
+
+    // Mobile and Down
+    @media #{$breakpoint-xs-only} {
+      grid-template-columns: 1fr;
+    }
   }
 
   //###################################################
@@ -59,7 +64,7 @@
       @media #{$breakpoint-sm-down} {
         width: 100%;
       }
-      
+
       //###################################################
 
       .gallery__text {

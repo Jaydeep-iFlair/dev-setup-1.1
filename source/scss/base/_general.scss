@@ -236,6 +236,11 @@ ol {
 
   &--expand {
     grid-column: span 2;
+    
+    // Mobile
+    @media #{$breakpoint-xs-only} {
+      grid-column: span 1;
+    }
   }
 }
 

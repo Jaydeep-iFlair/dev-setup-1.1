@@ -71,11 +71,13 @@
 
     //###################################################
 
-    &:focus::before,
-    &.is-active::before,
-    &:hover::before {
-      transform: translate(0);
-      width: calc(30%);
+    &:focus,
+    &.is-active,
+    &:hover {
+      &::before {
+        transform: translate(0);
+        width: calc(30%);
+      }
     }
   }
 }

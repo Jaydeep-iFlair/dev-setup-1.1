@@ -8,16 +8,33 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
 
+    // Mobile
+    @media #{$breakpoint-xs-only} {
+      grid-template-columns: 1fr;
+      margin-bottom: 24px;
+    }
+
+    //###################################################
+
     &:nth-child(even) {
       .image-text__text {
-        order: -1;
+        padding-left: 0;
+
+        // Tablet P and Up
+        @media #{$breakpoint-sm-up} {
+          order: -1;
+        }
       }
+
+      //###################################################
 
       .image-text__image-inner {
         left: 0;
         right: initial;
       }
     }
+
+    //###################################################
 
     &:hover {
       .image-text__image img {
@@ -26,10 +43,18 @@
     }
   }
 
+  //###################################################
+
   &__image {
     position: relative;
     height: 0;
     padding-bottom: 70%;
+
+    @media #{$breakpoint-xs-only} {
+      margin-bottom: 10px;
+    }
+
+    //###################################################
 
     &-inner {
       overflow: hidden;
@@ -38,6 +63,12 @@
       width: 50vw;
       top: 0;
       right: 0;
+
+      @media #{$breakpoint-xs-only} {
+        width: 100%;
+      }
+
+      //###################################################
 
       img {
         position: absolute;
@@ -51,7 +82,20 @@
     }
   }
 
+  //###################################################
+
   &__text {
-    padding: 80px;
+    padding: 24px 80px;
+    padding-right: 0;
+
+    // Tablet P and Down
+    @media #{$breakpoint-sm-down} {
+      padding: 24px;
+    }
+
+    // Mobile
+    @media #{$breakpoint-xs-only} {
+      padding: 0;
+    }
   }
 }
