@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Setup</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="public/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="public/img/favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="public/css/main.css">
+</head>
+
+<body>
+
+  <!-- START : Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <img src="public/img/logo.png" alt="Site Logo">
+        </a>
+
+        <button class="hamburger">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </button>
+
+        <div class="navigation">
+          <nav aria-label="Primary Navigation">
+            <ul>
+              <li>
+                <a href="index.html" class="navigation__link">Home</a>
+              </li>
+              <li>
+                <a href="demo-page.html" class="navigation__link">Typography</a>
+              </li>
+              <li>
+                <a href="about.html" class="navigation__link">About Us</a>
+              </li>
+              <li>
+                <a href="contact.html" class="navigation__link is-active">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- END : Header -->
+
+  <!-- START : Main -->
+  <main>
+
+    <!-- START: Form -->
+
+    <!-- END: Form -->
+
+    <section class="sec-mod-form mb-100">
+      <div class="mod-form">
+        <div class="container">
+          <h2 class="text-center mb-40">Contact Us</h2>
+          <div class="mod-form__inner">
+            <div class="mod-form__image">
+              <img src="public/img/contact.svg" alt="Contact Graphic Image">
+            </div>
+            <div class="mod-form__main">
+              <form>
+                <div class="mod-form__content">
+                  <div class="form-group">
+                    <label for="name">Name <span>*</span></label>
+                    <input type="text" name="text" id="name" class="mod-input" placeholder="Jon" autocomplete="off" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="sur-name">Surname <span>*</span></label>
+                    <input type="text" name="sur-name" id="sur-name" class="mod-input" placeholder="Doe" autocomplete="off" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="number">Mobile No. <span>*</span></label>
+                    <input type="text" name="number" id="number" class="mod-input" placeholder="+ 0123456789" pattern="[0-9]" maxlength="12" autocomplete="off" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="mail">E-mail <span>*</span></label>
+                    <input type="email" name="mail" id="mail" class="mod-input" placeholder="example@email.com" autocomplete="off" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label>City <span>*</span></label>
+                    <div class="dropdown">
+                      <button class="dropdown__placeholder" type="button">
+                        <span class="dropdown__placeholder-text">Select</span>
+                        <i class="icon : icon-chevron-down"></i>
+                      </button>
+
+                      <div class="dropdown__list">
+                        <ul>
+                          <li class="dropdown__list-item">
+                            <input type="radio" name="news_year" id="news_2022" data-title="2022">
+                            <label for="news_2022" class="dropdown__list-option">New York</label>
+                          </li>
+                          <li class="dropdown__list-item">
+                            <input type="radio" name="news_year" id="news_2021" data-title="2021">
+                            <label for="news_2021" class="dropdown__list-option">London</label>
+                          </li>
+                          <li class="dropdown__list-item">
+                            <input type="radio" name="news_year" id="news_2021" data-title="2021">
+                            <label for="news_2021" class="dropdown__list-option">Paris</label>
+                          </li>
+                          <li class="dropdown__list-item">
+                            <input type="radio" name="news_year" id="news_2021" data-title="2021">
+                            <label for="news_2021" class="dropdown__list-option">Amsterdam</label>
+                          </li>
+                          <li class="dropdown__list-item">
+                            <input type="radio" name="news_year" id="news_2021" data-title="2021">
+                            <label for="news_2021" class="dropdown__list-option">Tokyo</label>
+                          </li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group form-group--radio">
+                    <label> Age</label>
+                    <div class="mod-radio__list">
+                      <input type="radio" id="age1" name="age" value="20" class="mod-radio">
+                      <label for="age1">15 - 20</label>
+                      <input type="radio" id="age2" name="age" value="40" class="mod-radio">
+                      <label for="age2">21 - 40</label>
+                      <input type="radio" id="age3" name="age" value="60" class="mod-radio">
+                      <label for="age3">41 - 60</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group form-group--expand">
+                    <label for="msg">Message<span>*</span></label>
+                    <textarea name="message" id="msg" class="mod-input" autocomplete="off" placeholder="Hello There! Type Your Message here." rows="6"></textarea>
+                  </div>
+
+                  <div class="form-group form-group--expand">
+                    <div class="terms-checkbox mb-20">
+                      <div>
+                        <input type="checkbox" name="terms" id="terms" checked>
+                        <div class="checkbox-icon"></div>
+                      </div>
+                      <label for="terms">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore cumque magnam debitis quod vero dolore harum minus quae nesciunt quibusdam ab repudiandae doloremque dolores, voluptatem esse aperiam voluptas? <a href="javascript:void(0)" class="form__link">Terms and Condition</a></label>
+                    </div>
+                  </div>
+
+                </div>
+
+                <button class="btn" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- END : Main -->
+
+  <!-- START : Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="index.html" class="footer__logo">
+          <img src="public/img/logo.png" alt="Site logo">
+        </a>
+
+        <div class="social-nav">
+          <ul>
+            <li class="social-nav__link">
+              <a href="#"><i class="icon : icon-linkedin"></i></a>
+            </li>
+            <li class="social-nav__link">
+              <a href="#"><i class="icon : icon-facebook"></i></a>
+            </li>
+            <li class="social-nav__link">
+              <a href="#"><i class="icon : icon-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- END : Footer -->
+
+  <script src="public/js/swiper.js"></script>
+
+  <script src="public/js/main.js"></script>
+</body>
+
+</html>

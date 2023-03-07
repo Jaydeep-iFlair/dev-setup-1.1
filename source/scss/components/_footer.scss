@@ -1,0 +1,25 @@
+//###################################################
+// Footer scss
+//###################################################
+
+.footer {
+  margin-top: auto;
+  background-color: $cgp-secondary;
+  padding: 20px 0;
+
+  //###################################################
+
+  &__logo img {
+    max-width: 50px;
+    width: 100%;
+    filter: contrast(140%);
+  }
+
+  //###################################################
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

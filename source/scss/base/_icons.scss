@@ -1,0 +1,75 @@
+// ###################################################
+// Icons
+// ###################################################
+
+.icon {
+  display: block;
+  position: relative;
+
+  // Icons for hover effect
+  &::before {
+    content: "";
+    background-color: var(--icon-color, $cgp-blue);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+  }
+
+  // ##################################################
+
+  &-linkedin {
+    width: 20px;
+    height: 20px;
+
+    &::before {
+      -webkit-mask-image: url("data:image/svg+xml,#{$icon_linkedin}");
+      mask-image: url("data:image/svg+xml,#{$icon_linkedin}");
+    }
+  }
+
+  // ##################################################
+
+  &-facebook {
+    width: 20px;
+    height: 16px;
+
+    &::before {
+      -webkit-mask-image: url("data:image/svg+xml,#{$icon_facebook}");
+      mask-image: url("data:image/svg+xml,#{$icon_facebook}");
+    }
+  }
+
+  // ##################################################
+
+  &-instagram {
+    width: 20px;
+    height: 20px;
+
+    &::before {
+      -webkit-mask-image: url("data:image/svg+xml,#{$icon_instagram}");
+      mask-image: url("data:image/svg+xml,#{$icon_instagram}");
+    }
+  }
+
+  // ##################################################
+
+  &-chevron-down {
+    width: 20px;
+    height: 20px;
+
+    &::before {
+      -webkit-mask-image: url("data:image/svg+xml,#{$icon_chevron-down}");
+      mask-image: url("data:image/svg+xml,#{$icon_chevron-down}");
+    }
+  }
+}

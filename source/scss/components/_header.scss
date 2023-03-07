@@ -1,0 +1,134 @@
+//###################################################
+// Header Main scss
+//###################################################
+
+.header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  padding: 10px 0;
+  background-color: #efe;
+  z-index: $z-header;
+
+  //###################################################
+
+  &__logo {
+    img {
+      max-width: 60px;
+      width: 100%;
+      display: inline-block;
+    }
+  }
+
+  //###################################################
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // #########################################################
+
+  .hamburger {
+    display: none;
+    font: inherit;
+    overflow: visible;
+    margin: 0;
+    cursor: pointer;
+    transition-timing-function: linear;
+    transition-duration: 0.15s;
+    transition-property: opacity, filter;
+    text-transform: none;
+    color: inherit;
+    border: 0;
+    text-align: center;
+    background-color: transparent;
+    padding: 0;
+
+    // Tablet P and Down
+    @media #{$breakpoint-sm-down} {
+      display: block;
+    }
+
+    // #########################################################
+
+    &-box {
+      display: inline-block;
+      position: relative;
+      width: 28px;
+      height: 24px;
+    }
+
+    // #########################################################
+
+    &-inner::before,
+    &-inner::after,
+    &-inner {
+      transition-timing-function: ease;
+      transition-property: transform;
+      background-color: $cgp-black;
+      transition-duration: 0.15s;
+      position: absolute;
+      border-radius: 4px;
+      width: 28px;
+      height: 2px;
+    }
+
+    // #########################################################
+
+    &-inner {
+      top: 50%;
+      display: block;
+      margin-top: -2px;
+      transition-duration: 0.22s;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+      // #########################################################
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+      }
+
+      // #########################################################
+
+      &::before {
+        transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
+        top: -8px;
+
+        // #########################################################
+
+        .is-menu-open & {
+          top: 0;
+          transition: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+          opacity: 0;
+        }
+      }
+
+      // #########################################################
+
+      &::after {
+        transition: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        bottom: -8px;
+
+        // #########################################################
+
+        .is-menu-open & {
+          transition: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+          transform: rotate(-90deg);
+          bottom: 0;
+        }
+      }
+
+      // #########################################################
+
+      .is-menu-open & {
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: rotate(225deg);
+        transition-delay: 0.12s;
+      }
+    }
+  }
+}

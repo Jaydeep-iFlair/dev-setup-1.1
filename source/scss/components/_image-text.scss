@@ -1,0 +1,57 @@
+//###################################################
+// Image Text scss
+//###################################################
+
+.image-text {
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+
+    &:nth-child(even) {
+      .image-text__text {
+        order: -1;
+      }
+
+      .image-text__image-inner {
+        left: 0;
+        right: initial;
+      }
+    }
+
+    &:hover {
+      .image-text__image img {
+        transform: scale(1.04);
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    height: 0;
+    padding-bottom: 70%;
+
+    &-inner {
+      overflow: hidden;
+      position: absolute;
+      height: 100%;
+      width: 50vw;
+      top: 0;
+      right: 0;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+    }
+  }
+
+  &__text {
+    padding: 80px;
+  }
+}

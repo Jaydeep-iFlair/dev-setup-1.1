@@ -1,0 +1,128 @@
+// ###################################################
+// Fonts :
+// ###################################################
+
+$font_primary: "Montserrat", sans-serif;
+// $font_secondary:  "Plantin MT Pro", sans-serif;
+
+// ###################################################
+// Colors :
+// ###################################################
+
+$cgp-black: #000000;
+$cgp-white: #ffffff;
+$cgp-primary: #e5e5e5;
+$cgp-blue: #14213d;
+$cgp-secondary: #5ab05a;
+
+// ###################################################
+// Break Points :
+// ###################################################
+
+$xxs: 350px;
+$xs: 767px;
+$sm: 991px;
+$md: 1023px;
+$lg: 1199px;
+$xl: 1365px;
+$xxl: 1439px;
+
+// ##################################################
+// Grid variables
+// ##################################################
+
+// GRID GUTTERS
+$gutter_xl:                40px;                // Desktop HD
+$gutter_lg:                40px;                // Desktop - large
+$gutter_md:                20px;                // Desktop - regular / Tablet landscape
+$gutter_sm:                20px;                // Tablet portrait
+$gutter_xs:                20px;              	// Mobile
+
+// Cols in grid
+$grid_cols:                12;
+
+// CONTAINER WIDTHS
+$container_xl:			1400px;                     // Desktop HD
+$container_lg:			1200px;                     // Desktop - large / Tablet landscape
+$container_md:			960px;                  	// Desktop - regular
+$container_sm:			702px;					    // Tablet - portrait
+$container_xs:			calc(100% - #{$gutter_xs * 2});    // Mobile
+
+// Grid
+$xs-max: 767px !default;                        // Set xs breakpoint's max width
+$sm-max: 1023px !default;                       // Set sm breakpoint's max width
+$md-max: 1199px !default;                       // Set md breakpoint's max width
+$lg-max: 1439px !default;                       // Set lg breakpoint's max width
+$xl-max: 1919px !default;                       // Set xl breakpoint's max width
+
+// Media query start end points
+$sm-start: ($xs-max + 1);
+$md-start: ($sm-max + 1);
+$lg-start: ($md-max + 1);
+$xl-start: ($lg-max + 1);
+
+$sm-end: $sm-max;
+$md-end: $md-max;
+$lg-end: $lg-max;
+$xl-end: $xl-max;
+
+
+// ##################################################
+// Breakpoints
+// ##################################################
+
+// Create breakpoint range statements to be used in media queries
+$breakpoint-xs-only: "only screen and (max-width: #{$xs-max})";
+
+$breakpoint-sm-down: "only screen and (max-width: #{$sm-end})";
+$breakpoint-sm-up: "only screen and (min-width: #{$sm-start})";
+$breakpoint-sm-only: "only screen and (min-width: #{$sm-start}) and (max-width: #{$sm-end})";
+
+$breakpoint-md-down: "only screen and (max-width: #{$md-end})";
+$breakpoint-md-up: "only screen and (min-width: #{$md-start})";
+$breakpoint-md-only: "only screen and (min-width: #{$md-start}) and (max-width: #{$md-end})";
+
+$breakpoint-sm-md-only: "only screen and (min-width: #{$sm-start}) and (max-width: #{$md-end})";
+
+$breakpoint-lg-down: "only screen and (max-width: #{$lg-end})";
+$breakpoint-lg-up: "only screen and (min-width: #{$lg-start})";
+$breakpoint-lg-only: "only screen and (min-width: #{$lg-start}) and (max-width: #{$lg-end})";
+
+$breakpoint-xl-down: "only screen and (max-width: #{$xl-end})";
+$breakpoint-xl-up: "only screen and (min-width: #{$xl-start})";
+$breakpoint-xl-only: "only screen and (min-width: #{$xl-start}) and (max-width: #{$xl-end})";
+
+
+// ###################################################
+// Z Indexes
+// ###################################################
+
+$z-header: 900;
+$z-model: 999;
+
+// ###################################################
+// Z Indexes
+// ###################################################
+
+$light: 300;
+$semi-bold: 600;
+$reg: 400;
+$medium: 500;
+$bold: 700;
+$black: 900;
+
+// ###################################################
+// Icons
+// ###################################################
+
+// Icon Linkedin
+$icon_linkedin: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.--%3E%3Cpath d='M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'/%3E%3C/svg%3E";
+
+// Icon Facebook
+$icon_facebook: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.--%3E%3Cpath d='m279.14 288 14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z'/%3E%3C/svg%3E";
+
+// Icon Instagram
+$icon_instagram: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.--%3E%3Cpath d='M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z'/%3E%3C/svg%3E";
+
+// Icon Chevron Down
+$icon_chevron-down: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z'/%3E%3C/svg%3E";

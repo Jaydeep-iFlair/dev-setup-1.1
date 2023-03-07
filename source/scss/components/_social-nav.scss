@@ -1,0 +1,43 @@
+//###################################################
+// Social Nav scss
+//###################################################
+
+.social-nav {
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: darken($cgp-secondary, 7%);
+
+  //###################################################
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  //###################################################
+
+  &__link {
+    display: block;
+
+    //###################################################
+
+    .icon::before {
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    //###################################################
+
+    a {
+      outline-color: transparent;
+    }
+
+    //###################################################
+
+    a:focus .icon::before,
+    .icon:hover::before {
+      background-color: $cgp-white;
+      transform: translateY(-4px);
+    }
+  }
+}

@@ -1,0 +1,91 @@
+//###################################################
+// Gallery scss
+//###################################################
+
+.gallery {
+  margin-top: 40px;
+  margin-bottom: 100px;
+
+  //###################################################
+
+  &__inner {
+    display: flex;
+    gap: 6px;
+
+    // Tablet P and Down
+    @media #{$breakpoint-sm-down} {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-gap: 10px;
+    }
+  }
+
+  //###################################################
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    width: 248px;
+    height: 400px;
+    transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    flex: auto;
+
+    // Tablet P and Down
+    @media #{$breakpoint-sm-down} {
+      width: 100%;
+    }
+
+    //###################################################
+    // Gradient Bottom
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 50%;
+      width: 100%;
+      z-index: 3;
+      opacity: 0.5;
+      background-image: linear-gradient(180deg, transparent, $cgp-black);
+    }
+
+    //###################################################
+
+    &:hover {
+      width: 500px;
+
+      // Tablet P and Down
+      @media #{$breakpoint-sm-down} {
+        width: 100%;
+      }
+      
+      //###################################################
+
+      .gallery__text {
+        opacity: 1;
+      }
+    }
+
+    //###################################################
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  //###################################################
+
+  &__text {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    color: #fff;
+    font-weight: $bold;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+}
